@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ITC — Institute Technical Council | IIT Bombay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="showPage('home')">
+        <span class="logo-itc">ITC</span>
+        <span class="logo-diamond">◆</span>
+        <span class="logo-sub">IITB</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="javascript:void(0)" onclick="showPage('home')" id="nav-home" class="active"><span class="nav-num">01</span>Home</a></li>
+        <li><a href="javascript:void(0)" onclick="showPage('about')" id="nav-about"><span class="nav-num">02</span>About</a></li>
+        <li><a href="javascript:void(0)" onclick="showPage('events')" id="nav-events"><span class="nav-num">03</span>Events</a></li>
+        <li><a href="javascript:void(0)" onclick="showPage('team')" id="nav-team"><span class="nav-num">04</span>Team</a></li>
+        <li><a href="javascript:void(0)" onclick="showPage('contact')" id="nav-contact"><span class="nav-num">05</span>Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HOME ══════════════ -->
+  <div class="page active" id="page-home">
+    <div class="hero">
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+      <div class="hero-eyebrow">
+        <span class="mono">EST. 1958</span>
+        <span class="eyebrow-sep"></span>
+        <span class="mono">IIT BOMBAY</span>
+        <span class="eyebrow-sep"></span>
+        <span class="mono">APEX TECH BODY</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="ht-line delay-1">Where Ideas</span>
+        <span class="ht-line delay-2 italic-word">Become</span>
+        <span class="ht-line delay-3">Technology.</span>
+      </h1>
+
+      <p class="hero-desc">
+        The apex body governing all technical activity at IIT Bombay — uniting 15+ clubs, thousands of students, and decades of innovation under one roof.
+      </p>
+
+      <div class="hero-ctas">
+        <button class="btn btn-primary" onclick="showPage('about')">Discover ITC</button>
+        <button class="btn btn-ghost" onclick="showPage('events')">View Events ↗</button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item tilt-card">
+          <div class="stat-val" data-target="15">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-lbl">Technical Clubs</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item tilt-card">
+          <div class="stat-val" data-target="2000">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-lbl">Active Members</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item tilt-card">
+          <div class="stat-val" data-target="50">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-lbl">Annual Events</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="section-label"><span class="mono">[ 01 ]</span>&nbsp;&nbsp;What We Do</p>
+        <h2 class="section-title">Powering the<br/>Technical Ecosystem</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feat-card tilt-card reveal">
+          <div class="feat-num mono">01</div>
+          <div class="feat-icon">🤖</div>
+          <h3>Robotics</h3>
+          <p>Hands-on competitions in mechanical design, automation, and embedded systems.</p>
+          <span class="feat-tag">Hardware</span>
+        </div>
+        <div class="feat-card tilt-card reveal">
+          <div class="feat-num mono">02</div>
+          <div class="feat-icon">💻</div>
+          <h3>Software Dev</h3>
+          <p>Web, mobile, and systems — building real-world tools that impact thousands.</p>
+          <span class="feat-tag">Software</span>
+        </div>
+        <div class="feat-card tilt-card reveal">
+          <div class="feat-num mono">03</div>
+          <div class="feat-icon">🔬</div>
+          <h3>Research</h3>
+          <p>Student-led research projects, patent filings, and startup incubation.</p>
+          <span class="feat-tag">Innovation</span>
+        </div>
+        <div class="feat-card tilt-card reveal">
+          <div class="feat-num mono">04</div>
+          <div class="feat-icon">🏆</div>
+          <h3>Competitions</h3>
+          <p>Representing IIT Bombay at national and international technical olympiads.</p>
+          <span class="feat-tag">Competitive</span>
+        </div>
+        <div class="feat-card tilt-card reveal">
+          <div class="feat-num mono">05</div>
+          <div class="feat-icon">📡</div>
+          <h3>Electronics</h3>
+          <p>PCB design, amateur radio, and communications engineering.</p>
+          <span class="feat-tag">Electronics</span>
+        </div>
+        <div class="feat-card tilt-card reveal">
+          <div class="feat-num mono">06</div>
+          <div class="feat-icon">🎓</div>
+          <h3>Workshops</h3>
+          <p>Skill-building sessions with industry experts and faculty all year round.</p>
+          <span class="feat-tag">Learning</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════ ABOUT ══════════════ -->
+  <div class="page" id="page-about">
+    <section class="section">
+      <div class="section-head">
+        <p class="section-label"><span class="mono">[ 02 ]</span>&nbsp;&nbsp;About ITC</p>
+        <h2 class="section-title">Mission, Vision<br/>& Purpose</h2>
+        <p class="section-desc">ITC coordinates every club, event, and technical initiative at IIT Bombay — shaping the institute's identity as a hub of innovation.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card tilt-card reveal">
+          <div class="about-num mono">01</div>
+          <h3>Our Mission</h3>
+          <p>To foster a culture of technical excellence, collaboration, and innovation — giving every student the resources and mentorship to turn curiosity into creation.</p>
+        </div>
+        <div class="about-card tilt-card reveal">
+          <div class="about-num mono">02</div>
+          <h3>Our Vision</h3>
+          <p>A campus where every student is an innovator. IIT Bombay as the breeding ground for the next generation of engineers, researchers, and tech entrepreneurs.</p>
+        </div>
+        <div class="about-card tilt-card reveal wide-card">
+          <div class="about-num mono">03</div>
+          <h3>What We Do</h3>
+          <p>ITC oversees 15+ technical clubs spanning robotics, software, electronics, astronomy, and more. We organize Techfest — Asia's largest science and tech festival — along with competitions, workshops, and speaker series year-round.</p>
+          <div class="tag-row">
+            <span class="chip">Techfest</span>
+            <span class="chip">Inter IIT Tech</span>
+            <span class="chip">XLR8</span>
+            <span class="chip">Hackathons</span>
+            <span class="chip amber">Workshops</span>
+            <span class="chip amber">Project Grants</span>
+            <span class="chip amber">Speaker Talks</span>
+          </div>
+        </div>
+        <div class="about-card tilt-card reveal">
+          <div class="about-num mono">04</div>
+          <h3>Student Impact</h3>
+          <p>Managing IIT Bombay's technical budget, allocating resources to member clubs, and ensuring every student has a platform to pursue technical excellence.</p>
+        </div>
+        <div class="about-card tilt-card reveal">
+          <div class="about-num mono">05</div>
+          <h3>Industry Interface</h3>
+          <p>Bridging students with top companies, startups, and research institutions for internships, collaborations, and real-world problem-solving.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════ EVENTS ══════════════ -->
+  <div class="page" id="page-events">
+    <section class="section">
+      <div class="section-head">
+        <p class="section-label"><span class="mono">[ 03 ]</span>&nbsp;&nbsp;Events</p>
+        <h2 class="section-title">Past & Upcoming<br/>Events</h2>
+        <p class="section-desc">A year of technical excitement — competitions, workshops, talks, and festivals organized by ITC and its member clubs.</p>
+      </div>
+      <div class="events-filter">
+        <button class="filter-btn active" onclick="filterEvents('all', this)">All</button>
+        <button class="filter-btn" onclick="filterEvents('upcoming', this)">Upcoming</button>
+        <button class="filter-btn" onclick="filterEvents('past', this)">Past</button>
+        <button class="filter-btn" onclick="filterEvents('workshop', this)">Workshops</button>
+        <button class="filter-btn" onclick="filterEvents('competition', this)">Competitions</button>
+      </div>
+      <div class="events-grid" id="eventsGrid"></div>
+    </section>
+  </div>
+
+  <!-- ══════════════ TEAM ══════════════ -->
+  <div class="page" id="page-team">
+    <section class="section">
+      <div class="section-head">
+        <p class="section-label"><span class="mono">[ 04 ]</span>&nbsp;&nbsp;Meet the Team</p>
+        <h2 class="section-title">The People<br/>Behind ITC</h2>
+        <p class="section-desc">Our cabinet and club managers who work tirelessly to make IIT Bombay's technical ecosystem thrive.</p>
+      </div>
+      <div class="team-block">
+        <div class="team-block-title"><span>⚙</span> ITC Cabinet</div>
+        <div class="team-grid" id="cabinetGrid"></div>
+      </div>
+      <div class="team-block">
+        <div class="team-block-title"><span>🏛</span> Club Managers</div>
+        <div class="team-grid" id="managersGrid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <div class="page" id="page-contact">
+    <section class="section">
+      <div class="section-head">
+        <p class="section-label"><span class="mono">[ 05 ]</span>&nbsp;&nbsp;Contact</p>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-desc">Have a question, idea, or collaboration in mind? We'd love to hear from you.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-left reveal">
+          <h3 class="contact-tagline">We're always open to conversations.</h3>
+          <p class="contact-para">Whether you're a student wanting to join a club, an organization looking to collaborate, or just curious about ITC — someone from our team will get back to you shortly.</p>
+          <div class="contact-details">
+            <div class="contact-detail-item tilt-card">
+              <div class="cd-icon">📍</div>
+              <div>
+                <div class="cd-label mono">Address</div>
+                <div class="cd-val">SAC Building, IIT Bombay, Powai, Mumbai — 400076</div>
+              </div>
+            </div>
+            <div class="contact-detail-item tilt-card">
+              <div class="cd-icon">📧</div>
+              <div>
+                <div class="cd-label mono">Email</div>
+                <div class="cd-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3158455271585845531f50521f585f">[email&#160;protected]</a></div>
+              </div>
+            </div>
+            <div class="contact-detail-item tilt-card">
+              <div class="cd-icon">🌐</div>
+              <div>
+                <div class="cd-label mono">Website</div>
+                <div class="cd-val">techclubiitb.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <div id="contactFormWrap">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" id="firstName" placeholder="Arjun" />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" id="lastName" placeholder="Sharma" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <select id="subject">
+                <option value="">Select a topic</option>
+                <option>Join a Club</option>
+                <option>Event Collaboration</option>
+                <option>Sponsorship</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea id="message" placeholder="Tell us what's on your mind..."></textarea>
+            </div>
+            <button class="btn btn-primary full-width" onclick="submitForm()">Send Message →</button>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">✅</div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out. ITC will respond within 2–3 working days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">ITC <span class="mono" style="font-size:.8rem;opacity:.35">◆ IITB</span></div>
+      <p class="footer-copy">© 2025 Institute Technical Council, IIT Bombay. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="javascript:void(0)" onclick="showPage('about')">About</a>
+        <a href="javascript:void(0)" onclick="showPage('events')">Events</a>
+        <a href="javascript:void(0)" onclick="showPage('contact')">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
